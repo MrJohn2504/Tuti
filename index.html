@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para la mejor Mamá ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #4a1026, #17000d 60%, #0b0006);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+    }
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      max-width: 1300px;
+      width: 100%;
+    }
+    .title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 8rem;
+      color: #ffc0d4;
+      text-shadow: 0 0 25px #ff5ea2;
+    }
+    .subtitle {
+      font-size: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 30px;
+      padding: 30px;
+    }
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 40px;
+      background: #ff5ea2;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #e04a89;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 25px;
+      box-shadow: 0 0 40px rgba(255, 192, 203, 0.35);
+    }
+    .section {
+      padding: 70px 20px;
+    }
+    .section h2 {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #ffc0d4;
+      margin-bottom: 30px;
+    }
+    .carousel {
+      max-width: 1100px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 25px;
+      position: relative;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease;
+    }
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      height: 650px;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 15px 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(4px);
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 40px;
+      transition: background 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .nav:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    .letter {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .letter p {
+      margin: 15px 0;
+      line-height: 1.9;
+    }
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #ffc0d4;
+    }
+    .heart {
+      position: fixed;
+      bottom: -50px;
+      animation: up linear infinite;
+      opacity: 0.6;
+      pointer-events: none;
+      z-index: 999;
+    }
+    @keyframes up {
+      from { transform: translateY(0) rotate(0deg); }
+      to { transform: translateY(-120vh) rotate(20deg); }
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 900px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+      .title {
+        font-size: 5rem;
+      }
+      .slide img {
+        height: 420px;
+      }
+    }
+    @media (max-width: 480px) {
+      .title { font-size: 3.8rem; }
+      .subtitle { font-size: 1.4rem; }
+      .section h2 { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="en-mi-corazon-tu-viviras.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="card">
+      <div class="subtitle">Para la mejor</div>
+      <div class="title">Mamá</div>
+      <p style="margin-top: 10px;">
+        Gracias por tu amor infinito, por cada abrazo, cada consejo y cada sacrificio.
+        Todo lo bueno que hay en mí tiene algo de ti.
+      </p>
+      <button class="btn" onclick="document.getElementById('music').play()">🎵 Reproducir canción</button>
+    </div>
+    <div>
+      <img src="fotos/navidad.jpg" alt="Mamá" style="width:100%; border-radius:25px;">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Recuerdos que guardo en mi corazón</h2>
+  <div class="carousel">
+    <button class="nav prev" onclick="move(-1)">❮</button>
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="fotos/familia.jpg" alt="Familia">
+        <div class="caption">Momentos en familia que valen oro.</div>
+      </div>
+      <div class="slide">
+        <img src="fotos/iglesia.jpg" alt="Iglesia">
+        <div class="caption">Siempre apoyándome y guiándome.</div>
+      </div>
+      <div class="slide">
+        <img src="fotos/navidad.jpg" alt="Navidad">
+        <div class="caption">Navidades llenas de amor y felicidad.</div>
+      </div>
+      <div class="slide">
+        <img src="fotos/beso.jpg" alt="Beso">
+        <div class="caption">Tu amor siempre será mi refugio.</div>
+      </div>
+    </div>
+    <button class="nav next" onclick="move(1)">❯</button>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card letter">
+    <h2>Una carta para ti, Mamá</h2>
+    <p>Mamá:</p>
+    <p>No hay palabras suficientes para agradecer todo lo que has hecho por mí. Desde pequeño has estado ahí, celebrando mis logros y ayudándome a levantarme cuando las cosas no salían bien.</p>
+    <p>Gracias por enseñarme con tu ejemplo el valor del esfuerzo, la honestidad y el amor por la familia.</p>
+    <p>Estos recuerdos son apenas una pequeña muestra de todos los momentos hermosos que hemos compartido y que siempre llevaré conmigo.</p>
+    <p>Quiero que sepas que te admiro, te respeto y te quiero más de lo que las palabras pueden expresar.</p>
+    <p>Siempre tendrás un lugar especial en mi corazón.</p>
+    <div class="signature">Con todo mi amor, Tu hijo ❤️</div>
+  </div>
+</section>
+
+<footer>🌹 Hecho con amor para la mejor mamá del mundo 🌹</footer>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.getElementById('slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  function move(direction) {
+    slideIndex = (slideIndex + direction + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  // Auto-slide cada 5 segundos
+  setInterval(() => move(1), 5000);
+
+  // Corazones flotantes
+  for (let i = 0; i < 40; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (15 + Math.random() * 25) + 'px';
+    heart.style.animationDuration = (8 + Math.random() * 8) + 's';
+    heart.style.animationDelay = (Math.random() * 6) + 's';
+    document.body.appendChild(heart);
+  }
+</script>
+
+</body>
+</html>
